@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CUSTOMER
+namespace ConsoleApplication4
 {
     class CustomerDetails
     {
