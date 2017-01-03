@@ -4,43 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BinaryOverload
+namespace MANISH_SHARMA
 {
-    class Calculator
+    class LEAP_YEARS
     {
-        public int number;
-        public Calculator()
+        static void Main(string[] args)
         {
-            number = 0;
-        }
-        public Calculator(int n)
-        {
-            number = n;
-        }
-        public static Calculator operator +(Calculator Calc1, Calculator Calc2)
-        {
-            Calculator calc3 = new Calculator(0);
-            calc3.number = Calc2.number + Calc1.number;
-            return calc3;
-        }
-            public void display()
+            int YEAR;
+            Console.WriteLine("ENTER THE YEAR");
+            YEAR = Convert.ToInt32(Console.ReadLine());
+            if (YEAR % 4 == 0)
             {
-                Console.WriteLine("{0}", number);
+                Console.WriteLine("YES, THIS YEAR IS LEAP YEAR");
             }
-    } 
-    class CalNum
-    {
-        static int Main(string [] args)
-        {
-            Calculator num1 = new Calculator(100);
-            Calculator num2 = new Calculator(50);
-            Calculator num3 = new Calculator();
-            num3 = num1 + num2;
-            num1.display();
-            num2.display();
-            num3.display();
+            else
+            {
+                Console.WriteLine("SoOrY...!!! THIS YEAR IS NOT A LEAP YEAR");
+            }
             Console.ReadLine();
-            return 0;
         }
     }
 }
+
+
