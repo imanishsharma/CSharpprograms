@@ -4,53 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MANISH_SHARMA
+namespace BinaryOverload
 {
-    class AREA
+    class Calculator
     {
-        static void Main(string[] args)
+        public int number;
+        public Calculator()
         {
-            float a, b, ar;
-            Console.WriteLine("ENTER THE FIRST NUMBER:-)");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("ENTER THE SECOND NUMBER");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("ENTER 1 FOR FIND THE AREA OF RECTANGLE");
-            Console.WriteLine("ENTER 2 FOR FIND THE AREA OF SQUARE");
-            Console.WriteLine("ENTER YOUR CHOICE (1-2)");
-            int ch = Convert.ToInt32(Console.ReadLine());
-
-            switch (ch)
+            number = 0;
+        }
+        public Calculator(int n)
+        {
+            number = n;
+        }
+        public static Calculator operator +(Calculator Calc1, Calculator Calc2)
+        {
+            Calculator calc3 = new Calculator(0);
+            calc3.number = Calc2.number + Calc1.number;
+            return calc3;
+        }
+            public void display()
             {
-                case 1:
-                    ar = a * b;
-                    Console.WriteLine("AREA OF RECTANGLE IS:/n");
-                    Console.WriteLine(ar);
-                    break;
-                case 2:
-                    ar = a * a;
-                    Console.WriteLine("AREA OF SQUARE IS: /n");
-                    Console.WriteLine(ar);
-                    break;
-                default:
-                    Console.WriteLine("WRONG CHOICE :-( ");
-                    break;
+                Console.WriteLine("{0}", number);
             }
+    } 
+    class CalNum
+    {
+        static int Main(string [] args)
+        {
+            Calculator num1 = new Calculator(100);
+            Calculator num2 = new Calculator(50);
+            Calculator num3 = new Calculator();
+            num3 = num1 + num2;
+            num1.display();
+            num2.display();
+            num3.display();
             Console.ReadLine();
+            return 0;
         }
     }
 }
-                    
-            
-               
-                   
-
-            
-            
-
-
-
-
-
-
-
