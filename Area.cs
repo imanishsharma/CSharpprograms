@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MANISH_SHARMA
+namespace manish
 {
-    class AREA
+    class Area
     {
         static void Main(string[] args)
         {
