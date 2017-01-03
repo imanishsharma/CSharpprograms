@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YOUR_JOURNALIST
+namespace ConsoleApplication4
 {
     class Kilometers
     {
         static void Main(string[] args)
         {
-            int Kilometer;
+            int kilometer;
             int meters;
             int centimeters;
             Console.Write("ENTER KILOMETER :-)");
-            Kilometer = Convert.ToInt32(Console.ReadLine());
-            meters = Kilometer * 1000;
-            centimeters = Kilometer * 100000;
-            Console.WriteLine("METERS IN " + Kilometer + " KM is:" + meters + " meters &  cnetimeters in " + Kilometer + " KM is: " + centimeters+" Centimeters");
+            kilometer = Convert.ToInt32(Console.ReadLine());
+            meters = kilometer * 1000;
+            centimeters = kilometer * 100000;
+            Console.WriteLine("METERS IN " + kilometer + " KM is:" + meters + " meters &  cnetimeters in " + kilometer + " KM is: " + centimeters+" Centimeters");
             Console.ReadLine();
         }
     }
